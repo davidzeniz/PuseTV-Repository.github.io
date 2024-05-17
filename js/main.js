@@ -79,7 +79,7 @@ $(document).ready(function(){
         $(".dashboard-contentPage, .Notifications-body").mCustomScrollbar({
         	theme:"dark-thin",
         	scrollbarPosition: "inside",
-        	autoHideScrollbar: true,
+        	autoHideScrollbar: true, 
         	scrollButtons: {enable: false} // Desactivado para mejorar la velocidad
         });
     });
