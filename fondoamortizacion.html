@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Period</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="./css/main.css">
+
+	<script src="https://kit.fontawesome.com/3c44aa10f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="public/css/style-icon-github.css">
+	
+	<style>
+       
+        .p-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+		table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+	<!-- SideBar -->
+	<section class="full-box cover dashboard-sideBar">
+		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
+		<div class="full-box dashboard-sideBar-ct">
+			<!--SideBar Title -->
+			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
+				AUDACES <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+			</div>
+			<!-- SideBar User info -->
+			<div class="full-box dashboard-sideBar-UserInfo">
+				<figure class="full-box">
+					<img src="./assets/img/team.jpg" alt="UserIcon">
+					<figcaption class="text-center text-titles">Grupo Audaces</figcaption>
+				</figure>
+				<ul class="full-box list-unstyled text-center">
+					
+					<li>
+						<a href="#!" class="btn-exit-system">
+							<i class="zmdi zmdi-power"></i>
+						</a>
+						<p>Cerrar Sesion</p>
+					</li>
+				</ul>
+			</div>
+			<!-- SideBar Menu -->
+			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
+				<li>
+					<a href="home.html">
+						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Integrantes
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-case zmdi-hc-fw"></i> Simulacion <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="period.html"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Cronograma Pagos</a>
+						</li>
+						<!-- <li>
+							<a href="subject.html"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Subject</a>
+						</li>
+						<li>
+							<a href="section.html"><i class="zmdi zmdi-graduation-cap zmdi-hc-fw"></i> Section</a>
+						</li>
+						<li>
+							<a href="salon.html"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Salon</a>
+						</li> -->
+					</ul>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> UNIDAD I <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="admin.html"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Tasas Efectivas</a>
+						</li>
+						<li>
+							<a href="teacher.html"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Calculo Interes Simple</a>
+						</li>
+						<li>
+							<a href="student.html"><i class="zmdi zmdi-face zmdi-hc-fw"></i> Calculo Interes Compuesto</a>
+						</li>
+						<li>
+							<a href="representative.html"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Tasa Nominal a Tasa Efectiva</a>
+						</li>
+						<li>
+							<a href="valorpresentesimple.html">
+								<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Valor Presente SimpComp
+							</a>						
+						</li>
+						<li>
+							<a href="valorfuturosimple.html">
+								<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Valor Futuro SimpComp
+							</a>						
+						</li>
+						<li>
+							<a href="tasainteres.html">
+								<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Calcular Tasa Interes
+							</a>						
+						</li>
+						
+					</ul>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-card zmdi-hc-fw"></i> UNIDAD II <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="registration.html"><i class="zmdi zmdi-money-box zmdi-hc-fw"></i> Factor Recuperacion Capital </a>
+						</li>
+						<li>
+							<a href="payments.html"><i class="zmdi zmdi-money zmdi-hc-fw"></i> Hallar Cuota</a>
+						</li>
+						<li>
+							<a href="fondoamortizacion.html">
+								<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Deposito Fondo Amortizacion
+							</a>						
+						</li>
+						<li>
+							<a href="anualidadgradientearimeticacreciente.html">
+								<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Anualidad Gradiente Art Crec
+							</a>						
+						</li>
+                        <li>
+							<a href="anualidadgradientearimeticadecreciente.html">
+								<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Anualidad Gradiente Art Desc
+							</a>						
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-card zmdi-hc-fw"></i> MI CALCULADORA VIRTUAL <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="micalculadora.html"><i class="zmdi zmdi-money-box zmdi-hc-fw"></i> Mi Calcu </a>
+						</li>
+						
+					</ul>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-card zmdi-hc-fw"></i> VAN Y TIR <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="vanytir.html"><i class="zmdi zmdi-money-box zmdi-hc-fw"></i> Calculo VAN y TIR </a>
+						</li>
+						
+					</ul>
+				</li>
+				<!-- <li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-shield-security zmdi-hc-fw"></i> Settings School <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="school.html"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> School Data</a>
+						</li>
+					</ul>
+				</li> -->
+			</ul>
+		</div>
+	</section>
+
+	<!-- Content page-->
+	<section class="full-box dashboard-contentPage">
+		<!-- NavBar -->
+		<nav class="full-box dashboard-Navbar">
+			<ul class="full-box list-unstyled text-right">
+				<li class="pull-left">
+					<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
+				</li>
+				<li>
+					<a href="#!" class="btn-Notifications-area">
+						<i class="zmdi zmdi-notifications-none"></i>
+						<span class="badge">7</span>
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-search">
+						<i class="zmdi zmdi-search"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-modal-help">
+						<i class="zmdi zmdi-help-outline"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- Content page -->
+	<div class="container-fluid">
+    <div class="page-header">
+        <h1 class="text-titles"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Panel <small>FACTOR DE DEPÓSITO FONDO DE AMORTIZACIÓN</small></h1>
+    </div>
+    <p class="lead"> FACTOR DE DEPÓSITO FONDO DE AMORTIZACIÓN </p>
+	</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<p class="p-title">Factor de Depósito Fondo de Amortización</p>
+					<form name="MyForm">
+						<div>
+							<label for="s">Cantidad de Dinero que se Depositará (S):</label>
+							<input type="text" id="s">
+						</div>
+						<div>
+							<label for="i">Tasa de Interés por Período (i):</label>
+							<input type="text" id="i">
+						</div>
+						<div>
+							<label for="n">Número de Períodos (n):</label>
+							<input type="text" id="n">
+						</div>
+						<button type="button" onclick="calcularFactorDeposito()">Calcular Factor de Depósito</button>
+						<br>
+						<p id="resultado"></p>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-12">
+			<h2>Tabla de Fondo de Amortización</h2>
+			<table>
+				<tr>
+					<th>Año</th>
+					<th>Aporte Anual</th>
+					<th>Interés</th>
+					<th>Agregado AL/F</th>
+					<th>Total en el Fondo</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td id="aporteAnualCell"></td>
+					<td>0</td>
+					<td></td>
+					<td></td>
+				</tr>
+				
+			</table>
+			<script>
+				var totalFondo = 0;
+				var aporteAnual = 0; // Se actualizará con el valor del cálculo del factor
+				var tasaInteres = 0; // Se actualizará con el valor ingresado por el usuario
+				var periodos = 0; // Se actualizará con el valor ingreso por el usuario
+			
+				function calcularFactorDeposito() {
+					var sInput = document.getElementById("s");
+					var iInput = document.getElementById("i");
+					var nInput = document.getElementById("n");
+			
+					var s = parseFloat(sInput.value.replace(',', '.'));
+					tasaInteres = parseFloat(iInput.value.replace(',', '.')); // Actualiza la tasa de interés
+					periodos = parseInt(nInput.value);
+			
+					if (!isNaN(s) && !isNaN(tasaInteres) && !isNaN(periodos)) {
+						var tabla = document.querySelector("table");
+						totalFondo = 0;
+			
+						for (var año = 1; año <= periodos; año++) {
+							var factorDeposito = (s * tasaInteres) / ((Math.pow(1 + tasaInteres, año) - 1));
+							var interes = tasaInteres * totalFondo;
+							var agregadoALF = factorDeposito + interes;
+							totalFondo += agregadoALF;
+			
+							var row = tabla.insertRow(-1);
+							var cell1 = row.insertCell(0);
+							var cell2 = row.insertCell(1);
+							var cell3 = row.insertCell(2);
+							var cell4 = row.insertCell(3);
+							var cell5 = row.insertCell(4);
+			
+							cell1.innerHTML = año;
+							cell2.innerHTML = factorDeposito.toFixed(2); // Mostramos el factor de depósito como aporte anual
+							cell3.innerHTML = interes.toFixed(2);
+							cell4.innerHTML = agregadoALF.toFixed(2);
+							cell5.innerHTML = totalFondo.toFixed(2);
+						}
+			
+						// Actualizamos el valor de aporte anual en la primera fila
+						document.getElementById("aporteAnualCell").textContent = factorDeposito.toFixed(2);
+						document.getElementById("resultado").textContent = "Factor de Depósito (Aporte Anual): " + factorDeposito.toFixed(2);
+					} else {
+						alert("Ingresa valores numéricos válidos.");
+					}
+				}
+			</script>
+			
+		</div>
+	</div>
+		
+
+
+		
+	</section>
+</script>
+	<!-- Notifications area -->
+	<section class="full-box Notifications-area">
+		<div class="full-box Notifications-bg btn-Notifications-area"></div>
+		<div class="full-box Notifications-body">
+			<div class="Notifications-body-title text-titles text-center">
+				Matematica para Negocios <i class="zmdi zmdi-close btn-Notifications-area"></i>
+			</div>
+			<br>
+			<div class="list-group">
+				<div class="list-group-item">
+					<div class="row-action-primary text-center">
+						<img src="./assets/img/profecosme.jpg" alt="UserIcon" style="width: 80%; height: 100%;" class="rounded-circle">
+					</div>
+					<div class="row-content">
+						<div class="least-content">...</div>
+						<h4 class="list-group-item-heading">DOCENTE</h4>
+						<p class="list-group-item-text">Ms. Manuel Edward Cosme Urbina</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Dialog help -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="Dialog-Help">
+	  	<div class="modal-dialog" role="document">
+		    <div class="modal-content">
+			    <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			    	<h4 class="modal-title">Help</h4>
+			    </div>
+			    <div class="modal-body">
+			        <p>
+			        	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt beatae esse velit ipsa sunt incidunt aut voluptas, nihil reiciendis maiores eaque hic vitae saepe voluptatibus. Ratione veritatis a unde autem!
+			        </p>
+			    </div>
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-primary btn-raised" data-dismiss="modal"><i class="zmdi zmdi-thumb-up"></i> Ok</button>
+		      	</div>
+		    </div>
+	  	</div>
+	</div>
+	<!--====== Scripts -->
+	<script src="./js/jquery-3.1.1.min.js"></script>
+	<script src="./js/sweetalert2.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/material.min.js"></script>
+	<script src="./js/ripples.min.js"></script>
+	<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script>
+		$.material.init();
+	</script>
+	<script src="js/prestamo.js"></script>
+	
+</body>
+</html>

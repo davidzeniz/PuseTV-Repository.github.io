@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Period</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="./css/main.css">
+
+	<script src="https://kit.fontawesome.com/3c44aa10f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="public/css/style-icon-github.css">
+
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .datos {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .texto_plomo {
+            color: #555;
+        }
+        .dato1 {
+            width: 60px;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+        .opcion3, .opcion5 {
+            padding: 5px;
+            font-size: 16px;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+        .azul {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .resultado {
+            margin-top: 20px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .imaytam {
+            width: 100px;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+	<!-- SideBar -->
+	<section class="full-box cover dashboard-sideBar">
+		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
+		<div class="full-box dashboard-sideBar-ct">
+			<!--SideBar Title -->
+			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
+				AUDACES <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+			</div>
+			<!-- SideBar User info -->
+			<div class="full-box dashboard-sideBar-UserInfo">
+				<figure class="full-box">
+					<img src="./assets/img/team.jpg" alt="UserIcon">
+					<figcaption class="text-center text-titles">Grupo Audaces</figcaption>
+				</figure>
+				<ul class="full-box list-unstyled text-center">
+					
+					<li>
+						<a href="#!" class="btn-exit-system">
+							<i class="zmdi zmdi-power"></i>
+						</a>
+						<p>Cerrar Sesion</p>
+					</li>
+				</ul>
+			</div>
+			<!-- SideBar Menu -->
+			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
+				<li>
+					<a href="home.html">
+						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Integrantes
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-case zmdi-hc-fw"></i> Simulacion <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="period.html"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Cronograma Pagos</a>
+						</li>
+						<!-- <li>
+							<a href="subject.html"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Subject</a>
+						</li>
+						<li>
+							<a href="section.html"><i class="zmdi zmdi-graduation-cap zmdi-hc-fw"></i> Section</a>
+						</li>
+						<li>
+							<a href="salon.html"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Salon</a>
+						</li> -->
+					</ul>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> UNIDAD I <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="admin.html"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Tasas Efectivas</a>
+						</li>
+						<li>
+							<a href="teacher.html"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Calculo Interes Simple</a>
+						</li>
+						<li>
+							<a href="student.html"><i class="zmdi zmdi-face zmdi-hc-fw"></i> Calculo Interes Compuesto</a>
+						</li>
+						<li>
+							<a href="representative.html"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Tasa Nominal a Tasa Efectiva</a>
+						</li>
+						<li>
+							<a href="valorpresentesimple.html">
+								<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Valor Presente SimpComp
+							</a>						
+						</li>
+						<li>
+							<a href="valorfuturosimple.html">
+								<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Valor Futuro SimpComp
+							</a>						
+						</li>
+						<li>
+							<a href="tasainteres.html">
+								<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Calcular Tasa Interes
+							</a>						
+						</li>
+						
+					</ul>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-card zmdi-hc-fw"></i> UNIDAD II <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="registration.html"><i class="zmdi zmdi-money-box zmdi-hc-fw"></i> Factor Recuperacion Capital </a>
+						</li>
+						<li>
+							<a href="payments.html"><i class="zmdi zmdi-money zmdi-hc-fw"></i> Hallar Cuota</a>
+						</li>
+						<li>
+							<a href="fondoamortizacion.html">
+								<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Deposito Fondo Amortizacion
+							</a>						
+						</li>
+						<li>
+							<a href="anualidadgradientearimeticacreciente.html">
+								<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Anualidad Gradiente Art Crec
+							</a>						
+						</li>
+                        <li>
+							<a href="anualidadgradientearimeticadecreciente.html">
+								<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Anualidad Gradiente Art Desc
+							</a>						
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-card zmdi-hc-fw"></i> MI CALCULADORA VIRTUAL <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="micalculadora.html"><i class="zmdi zmdi-money-box zmdi-hc-fw"></i> Mi Calcu </a>
+						</li>
+						
+					</ul>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-card zmdi-hc-fw"></i> VAN Y TIR <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="vanytir.html"><i class="zmdi zmdi-money-box zmdi-hc-fw"></i> Calculo VAN y TIR </a>
+						</li>
+						
+					</ul>
+				</li>
+				<!-- <li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-shield-security zmdi-hc-fw"></i> Settings School <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="school.html"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> School Data</a>
+						</li>
+					</ul>
+				</li> -->
+			</ul>
+		</div>
+	</section>
+
+	<!-- Content page-->
+	<section class="full-box dashboard-contentPage">
+		<!-- NavBar -->
+		<nav class="full-box dashboard-Navbar">
+			<ul class="full-box list-unstyled text-right">
+				<li class="pull-left">
+					<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
+				</li>
+				<li>
+					<a href="#!" class="btn-Notifications-area">
+						<i class="zmdi zmdi-notifications-none"></i>
+						<span class="badge">7</span>
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-search">
+						<i class="zmdi zmdi-search"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-modal-help">
+						<i class="zmdi zmdi-help-outline"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- Content page -->
+		<div class="container-fluid">
+			<div class="page-header">
+			  <h1 class="text-titles"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Panel <small>conversion Tasa Nominal a Tasa Efectiva</small></h1>
+			</div>
+			<p class="lead"> Conversiones </p>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<p>TASA NOMINAL A TASA EFECTIVA</p>
+					<div class="container">
+						<table cellSpacing=0 cellPadding=0 width="100%" align=center valign=top border=0>
+						  <tr>
+							<td>
+
+								<form name="MyForm">
+								<div class="datos">
+								  <table cellSpacing=0 cellPadding=0 width="100%" align=center valign=top border=0>
+								   <tr>
+									 <td width="100%" align="right" class="texto_plomo"><center>Tasa de inter&eacute;s nominal (%):</center>
+									 </td>
+								   </tr>
+								   <tr><td height=5></td>
+								   </tr>
+								   <tr>
+									 <td width="100%" align=center>
+										<table cellSpacing=0 cellPadding=0 width="57%" align=center valign=top border=0>
+										  <tr>
+											<center>
+											 <td>
+											   <input type="number" class="dato1" name="tasanom" placeholder="" maxlength="5" autocomplete="off">
+											 </td>
+											 <td>
+											   <select class="opcion3" name="freq">
+											 <option value="1" selected>Anual</option>
+											 <option value="2">Semestral</option>
+											 <option value="3">Cuatrimestral</option>
+											 <option value="4">Trimestral</option>
+											 <option value="6">Bimestral</option>
+											 <option value="12">Mensual</option>
+											 <option value="24">Quincenal</option>
+											 <option value="360">Diario</option>
+												</select>
+											 </td>
+											</center>
+										  </tr>
+										</table>
+									 </td>
+								   </tr>
+								   <tr><td height=10></td>
+								   </tr>
+								   <tr>
+									 <td width="100%" align="right" class="texto_plomo"><center>Frecuencia de capitalizaci&oacute;n:</center>
+									 </td>
+								   </tr>
+								   <tr><td height=5></td>
+								   </tr>
+								   <tr>
+									 <td width="100%">
+									   <center>
+										   <select class="opcion5" name="freqcap">
+											 <option value="1" selected>Anual</option>
+											 <option value="2">Semestral</option>
+											 <option value="3">Cuatrimestral</option>
+											 <option value="4">Trimestral</option>
+											 <option value="6">Bimestral</option>
+											 <option value="12">Mensual</option>
+											 <option value="24">Quincenal</option>
+											 <option value="360">Diario</option>
+										   </select>
+									   </center>
+									 </td>
+								   </tr>
+								   <tr><td height=15></td>
+								   </tr>
+								   <tr>
+									 <td width="100%" align=center>
+									   <table cellSpacing=0 cellPadding=0 align=center valign=top border=0>
+										 <tr>
+										   <td align=center>
+											<div class="buttons" style="text-align: center;">
+											  <button type="button" class="azul" onclick="limpiar()">LIMPIAR</button>
+											  <button type="button" class="azul" onclick="return validacion(this)">CALCULAR</button>
+											</div> 
+										   <td>
+										 </tr>
+									   </table>
+									 </td>
+								   </tr>
+								  </table>
+								</div>
+								<div class="resultado">
+								  <table cellSpacing=0 cellPadding=0 width="100%" align=center valign=top border=0>
+								   <tr>
+									 <td width="100%" align="right" class="texto_plomo""><center>Resultados:</center>
+									 </td>
+								   </tr>
+								   <tr><td height=5></td>
+								   </tr>
+								   <tr>
+									 <td width="100%" align="right" class="texto_plomo""><center>Tasa Efectiva Anual (TEA):</center>
+									 </td>
+								   </tr>
+								   <tr>
+									 <td width="100%"><center><input type="text" class="imaytam" name="rtea" readonly="readonly"></center>
+									 </td>
+								   </tr>
+								   <tr><td height=5></td>
+								   </tr>
+								   <tr>
+									 <td width="100%" align="right" class="texto_plomo""><center>Tasa Efectiva Semestral (TES):</center>
+									 </td>
+								   </tr>
+								   <tr>
+									 <td width="100%"><center><input type="text" class="imaytam" name="rtes" readonly="readonly"></center>
+									 </td>
+								   </tr>
+								   <tr><td height=5></td>
+								   </tr>
+								   <tr>
+									 <td width="100%" align="right" class="texto_plomo""><center>Tasa Efectiva Cuatrimestral (TEC):</center>
+									 </td>
+								   </tr>
+								   <tr>
+									 <td width="100%"><center><input type="text" class="imaytam" name="rtec" readonly="readonly"></center>
+									 </td>
+								   </tr>
+								   <tr><td height=5></td>
+								   </tr>
+								   <tr>
+									 <td width="100%" align="right" class="texto_plomo""><center>Tasa Efectiva Trimestral (TET):</center>
+									 </td>
+								   </tr>
+								   <tr>
+									 <td width="100%"><center><input type="text" class="imaytam" name="rtet" readonly="readonly"></center>
+									 </td>
+								   </tr>
+								   <tr><td height=5></td>
+								   </tr>
+								   <tr>
+									 <td width="100%" align="right" class="texto_plomo""><center>Tasa Efectiva Bimestral (TEB):</center>
+									 </td>
+								   </tr>
+								   <tr>
+									 <td width="100%"><center><input type="text" class="imaytam" name="rteb" readonly="readonly"></center>
+									 </td>
+								   </tr>
+								   <tr><td height=5></td>
+								   </tr>
+								   <tr>
+									 <td width="100%" align="right" class="texto_plomo""><center>Tasa Efectiva Mensual (TEM):</center>
+									 </td>
+								   </tr>
+								   <tr>
+									 <td width="100%"><center><input type="text" class="imaytam" name="rtem" readonly="readonly"></center>
+									 </td>
+								   </tr>
+								   <tr><td height=5></td>
+								   </tr>
+								   <tr>
+									 <td width="100%" align="right" class="texto_plomo""><center>Tasa Efectiva Quincenal (TEQ):</center>
+									 </td>
+								   </tr>
+								   <tr>
+									 <td width="100%"><center><input type="text" class="imaytam" name="rteq" readonly="readonly"></center>
+									 </td>
+								   </tr>
+								   <tr><td height=5></td>
+								   </tr>
+								   <tr>
+									 <td width="100%" align="right" class="texto_plomo""><center>Tasa Efectiva Diaria (TED):</center>
+									 </td>
+								   </tr>
+								   <tr>
+									 <td width="100%"><center><input type="text" class="imaytam" name="rted" readonly="readonly"></center>
+									 </td>
+								   </tr>
+								   <tr><td height=5></td>
+								   </tr>
+								  </table>
+								</div>
+								</form>
+					  
+								<table cellSpacing=0 cellPadding=0 width="100%" align=center valign=top border=0>
+								   <tr><td height=30></td>
+								   </tr>
+								</table>
+							</td>
+						  </tr>
+						  <tr><td height="30"></td>
+						  </tr>
+						</table>
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+	</section>
+</script>
+	<!-- Notifications area -->
+	<section class="full-box Notifications-area">
+		<div class="full-box Notifications-bg btn-Notifications-area"></div>
+		<div class="full-box Notifications-body">
+			<div class="Notifications-body-title text-titles text-center">
+				Matematica para Negocios <i class="zmdi zmdi-close btn-Notifications-area"></i>
+			</div>
+			<br>
+			<div class="list-group">
+				<div class="list-group-item">
+					<div class="row-action-primary text-center">
+						<img src="./assets/img/profecosme.jpg" alt="UserIcon" style="width: 80%; height: 100%;" class="rounded-circle">
+					</div>
+					<div class="row-content">
+						<div class="least-content">...</div>
+						<h4 class="list-group-item-heading">DOCENTE</h4>
+						<p class="list-group-item-text">Ms. Manuel Edward Cosme Urbina</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Dialog help -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="Dialog-Help">
+	  	<div class="modal-dialog" role="document">
+		    <div class="modal-content">
+			    <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			    	<h4 class="modal-title">Help</h4>
+			    </div>
+			    <div class="modal-body">
+			        <p>
+			        	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt beatae esse velit ipsa sunt incidunt aut voluptas, nihil reiciendis maiores eaque hic vitae saepe voluptatibus. Ratione veritatis a unde autem!
+			        </p>
+			    </div>
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-primary btn-raised" data-dismiss="modal"><i class="zmdi zmdi-thumb-up"></i> Ok</button>
+		      	</div>
+		    </div>
+	  	</div>
+	</div>
+	<!--====== Scripts -->
+	<script src="./js/jquery-3.1.1.min.js"></script>
+	<script src="./js/sweetalert2.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/material.min.js"></script>
+	<script src="./js/ripples.min.js"></script>
+	<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script>
+		$.material.init();
+	</script>
+	<script src="js/prestamo.js"></script>
+	<script language=javascript type=text/javascript> 
+
+     function validacion(formulario) 
+     {
+       var vnum = /^(1|2|3|4|5|6|7|8|9|0|,|.)+$/
+       var vnum2 = ".0123456789";
+
+       if(!vnum.test(MyForm.tasanom.value)) { 
+          alert('El contenido de la tasa nominal es incoherente.')
+          return false
+       }  
+       calcular();
+     }
+     function calcular() { 
+       var i = parseFloat(document.MyForm.tasanom.value); 
+       var n = parseInt(document.MyForm.freq.value); 
+       var m = parseInt(document.MyForm.freqcap.value); 
+
+       if(i>=0)
+       {
+           document.MyForm.rtea.value=(100*(Math.pow(1+(i*n)/(100*m),m/1)-1)).toFixed(8).concat("%");
+           document.MyForm.rtes.value=(100*(Math.pow(1+(i*n)/(100*m),m/2)-1)).toFixed(8).concat("%");
+           document.MyForm.rtec.value=(100*(Math.pow(1+(i*n)/(100*m),m/3)-1)).toFixed(8).concat("%");
+           document.MyForm.rtet.value=(100*(Math.pow(1+(i*n)/(100*m),m/4)-1)).toFixed(8).concat("%");
+           document.MyForm.rteb.value=(100*(Math.pow(1+(i*n)/(100*m),m/6)-1)).toFixed(8).concat("%");
+           document.MyForm.rtem.value=(100*(Math.pow(1+(i*n)/(100*m),m/12)-1)).toFixed(8).concat("%");
+           document.MyForm.rteq.value=(100*(Math.pow(1+(i*n)/(100*m),m/24)-1)).toFixed(8).concat("%");
+           document.MyForm.rted.value=(100*(Math.pow(1+(i*n)/(100*m),m/360)-1)).toFixed(8).concat("%");
+       }else{
+           document.MyForm.rtea.value="Datos incorrectos";
+       }
+     } 
+     function limpiar() { 
+           document.MyForm.tasanom.value='';
+           document.MyForm.rtea.value='';
+           document.MyForm.rtes.value='';
+           document.MyForm.rtec.value='';
+           document.MyForm.rtet.value='';
+           document.MyForm.rteb.value='';
+           document.MyForm.rtem.value='';
+           document.MyForm.rteq.value='';
+           document.MyForm.rted.value='';
+     }
+
+     function validacion2(formulario) 
+     {
+       var vnum = /^(1|2|3|4|5|6|7|8|9|0|,|.)+$/
+       var vnum2 = ".0123456789";
+
+       if(!vnum.test(MyForm2.tasaefe.value)) { 
+          alert('El contenido de la tasa efectiva es incoherente.')
+          return false
+       }  
+       calcular2();
+     }
+     function calcular2() { 
+       var i = parseFloat(document.MyForm2.tasaefe.value); 
+       var n = parseInt(document.MyForm2.freq2.value); 
+       var m = parseInt(document.MyForm2.freqcap2.value); 
+
+       if(i>=0)
+       {
+           document.MyForm2.rtna.value=(100*(m/1)*(Math.pow(1+i/100,n/m)-1)).toFixed(8).concat("%");
+           document.MyForm2.rtns.value=(100*(m/2)*(Math.pow(1+i/100,n/m)-1)).toFixed(8).concat("%");
+           document.MyForm2.rtnc.value=(100*(m/3)*(Math.pow(1+i/100,n/m)-1)).toFixed(8).concat("%");
+           document.MyForm2.rtnt.value=(100*(m/4)*(Math.pow(1+i/100,n/m)-1)).toFixed(8).concat("%");
+           document.MyForm2.rtnb.value=(100*(m/6)*(Math.pow(1+i/100,n/m)-1)).toFixed(8).concat("%");
+           document.MyForm2.rtnm.value=(100*(m/12)*(Math.pow(1+i/100,n/m)-1)).toFixed(8).concat("%");
+           document.MyForm2.rtnq.value=(100*(m/24)*(Math.pow(1+i/100,n/m)-1)).toFixed(8).concat("%");
+           document.MyForm2.rtnd.value=(100*(m/360)*(Math.pow(1+i/100,n/m)-1)).toFixed(8).concat("%");
+       }else{
+           document.MyForm2.rtna.value="Datos incorrectos";
+       }
+     } 
+     function limpiar2() { 
+           document.MyForm2.tasaefe.value='';
+           document.MyForm2.rtna.value='';
+           document.MyForm2.rtns.value='';
+           document.MyForm2.rtnc.value='';
+           document.MyForm2.rtnt.value='';
+           document.MyForm2.rtnb.value='';
+           document.MyForm2.rtnm.value='';
+           document.MyForm2.rtnq.value='';
+           document.MyForm2.rtnd.value='';
+     }
+
+     function validacion3(formulario) 
+     {
+       var vnum = /^(1|2|3|4|5|6|7|8|9|0|,|.)+$/
+       var vnum2 = ".0123456789";
+
+       if(!vnum.test(MyForm3.tasaefe3.value)) { 
+          alert('El contenido de la tasa efectiva es incoherente.')
+          return false
+       }  
+       calcular3();
+     }
+     function calcular3() { 
+       var i = parseFloat(document.MyForm3.tasaefe3.value); 
+       var n = parseInt(document.MyForm3.freq3.value); 
+
+       if(i>=0)
+       {
+           document.MyForm3.rtea2.value=(100*(Math.pow(1+i/100,n/1)-1)).toFixed(8).concat("%");
+           document.MyForm3.rtes2.value=(100*(Math.pow(1+i/100,n/2)-1)).toFixed(8).concat("%");
+           document.MyForm3.rtec2.value=(100*(Math.pow(1+i/100,n/3)-1)).toFixed(8).concat("%");
+           document.MyForm3.rtet2.value=(100*(Math.pow(1+i/100,n/4)-1)).toFixed(8).concat("%");
+           document.MyForm3.rteb2.value=(100*(Math.pow(1+i/100,n/6)-1)).toFixed(8).concat("%");
+           document.MyForm3.rtem2.value=(100*(Math.pow(1+i/100,n/12)-1)).toFixed(8).concat("%");
+           document.MyForm3.rteq2.value=(100*(Math.pow(1+i/100,n/24)-1)).toFixed(8).concat("%");
+           document.MyForm3.rted2.value=(100*(Math.pow(1+i/100,n/360)-1)).toFixed(8).concat("%");
+       }else{
+           document.MyForm3.rtea2.value="Datos incorrectos";
+       }
+     } 
+     function limpiar3() { 
+           document.MyForm3.tasaefe3.value='';
+           document.MyForm3.rtea2.value='';
+           document.MyForm3.rtes2.value='';
+           document.MyForm3.rtec2.value='';
+           document.MyForm3.rtet2.value='';
+           document.MyForm3.rteb2.value='';
+           document.MyForm3.rtem2.value='';
+           document.MyForm3.rteq2.value='';
+           document.MyForm3.rted2.value='';
+     }
+
+     function validacion4(formulario) 
+     {
+       var vnum = /^(1|2|3|4|5|6|7|8|9|0|,|.)+$/
+       var vnum2 = ".0123456789";
+
+       if(!vnum.test(MyForm4.tasanom4.value)) { 
+          alert('El contenido de la tasa nominal es incoherente.')
+          return false
+       }  
+       calcular4();
+     }
+     function calcular4() { 
+       var i = parseFloat(document.MyForm4.tasanom4.value); 
+       var p = parseInt(document.MyForm4.freq4.value); 
+       var m = parseInt(document.MyForm4.freqcap3.value); 
+       var n = parseInt(document.MyForm4.freqcap4.value);
+
+       if(i>=0)
+       {
+           document.MyForm4.rtna2.value=(100*(n/1)*(Math.pow(1+(i*p)/(100*m),m/n)-1)).toFixed(8).concat("%");
+           document.MyForm4.rtns2.value=(100*(n/2)*(Math.pow(1+(i*p)/(100*m),m/n)-1)).toFixed(8).concat("%");
+           document.MyForm4.rtnc2.value=(100*(n/3)*(Math.pow(1+(i*p)/(100*m),m/n)-1)).toFixed(8).concat("%");
+           document.MyForm4.rtnt2.value=(100*(n/4)*(Math.pow(1+(i*p)/(100*m),m/n)-1)).toFixed(8).concat("%");
+           document.MyForm4.rtnb2.value=(100*(n/6)*(Math.pow(1+(i*p)/(100*m),m/n)-1)).toFixed(8).concat("%");
+           document.MyForm4.rtnm2.value=(100*(n/12)*(Math.pow(1+(i*p)/(100*m),m/n)-1)).toFixed(8).concat("%");
+           document.MyForm4.rtnq2.value=(100*(n/24)*(Math.pow(1+(i*p)/(100*m),m/n)-1)).toFixed(8).concat("%");
+           document.MyForm4.rtnd2.value=(100*(n/360)*(Math.pow(1+(i*p)/(100*m),m/n)-1)).toFixed(8).concat("%");
+       }else{
+           document.MyForm4.rtna2.value="Datos incorrectos";
+       }
+     } 
+     function limpiar4() { 
+           document.MyForm4.tasanom4.value='';
+           document.MyForm4.rtna2.value='';
+           document.MyForm4.rtns2.value='';
+           document.MyForm4.rtnc2.value='';
+           document.MyForm4.rtnt2.value='';
+           document.MyForm4.rtnb2.value='';
+           document.MyForm4.rtnm2.value='';
+           document.MyForm4.rtnq2.value='';
+           document.MyForm4.rtnd2.value='';
+     }
+
+     /* menu responsive */
+     function myFunction() {
+       var x = document.getElementById("myTopnav");
+       if (x.className === "topnav") {
+         x.className += " responsive";
+       } else {
+         x.className = "topnav";
+       }
+     }
+
+  </script>
+</body>
+</html>
