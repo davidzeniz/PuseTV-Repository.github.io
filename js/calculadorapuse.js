@@ -16,25 +16,27 @@ function calculateInterest() {
     var cap = parseFloat(capitalInput);
 
     // Calcular el interés
-    var totalInt = deudat - cap;
+    var totalInt = Math.ceil(deudat - cap);
+    var totalInt2 =deudat - cap;
 
     // Mostrar el resultado en el campo de Interes
-    document.getElementById("resultadoInteres").innerText = totalInt.toFixed(2); // toFixed(2) para redondear a 2 decimales
-
+    document.getElementById("resultadoInteres").innerText = totalInt; 
 
 
     // Calcular el valor INTERÉS DESCONTADO
     var descuentoCombo = parseFloat(document.getElementById("descuentoInteresesCombo").value);
-    var valorInteresDescontado = descuentoCombo * totalInt ;
+    var valorInteresDescontado =  Math.ceil(descuentoCombo * totalInt2) ;
+    var valorInteresDescontado2 =  descuentoCombo * totalInt2 ;
+
     // Mostrar el resultado en el campo de INTERÉS DESCONTADO 
-    document.getElementById("interesDescontado").innerText = valorInteresDescontado.toFixed(2);
+    document.getElementById("interesDescontado").innerText = valorInteresDescontado;
 
 
 
     // Calcular el PAGO TOTAL DSCTO I
-    var valorPagoTotalDescuentoI = deudat - valorInteresDescontado;
+    var valorPagoTotalDescuentoI =  Math.ceil(deudat - valorInteresDescontado2);
     // Mostrar el resultado en el campo de PAGO TOTAL DSCTO I
-    document.getElementById("pagototaldescuento").innerText = valorPagoTotalDescuentoI.toFixed(2);
+    document.getElementById("pagototaldescuento").innerText = valorPagoTotalDescuentoI;
 
 
 
@@ -45,15 +47,15 @@ function calculateInterest() {
      // Calcular el INTERES CON DSTO
      var valorInteresConDescuento = valorPagoTotalDescuentoI ;
      // Mostrar el resultado en el campo de "INTERES CON DSTO"
-     document.getElementById("interesConDescuento").innerText = valorInteresConDescuento.toFixed(2);
+     document.getElementById("interesConDescuento").innerText = valorInteresConDescuento;
 
 
 
      // Calcular PAGO TOTAL C/INTERES
-    var valorPagoTotalCIntereses = deudat - valorInteresDescontado;
+    var valorPagoTotalCIntereses =  Math.ceil(deudat - valorInteresDescontado);
 
     // Mostrar el resultado en el campo de  PAGO TOTAL C/INTERES
-    document.getElementById("pagototalconintereses").innerText = valorPagoTotalCIntereses.toFixed(2);
+    document.getElementById("pagototalconintereses").innerText = valorPagoTotalCIntereses;
 
     
 
@@ -77,46 +79,48 @@ function calculateInterest() {
 
 
     // PARA EL INTERES CON/SIN DSTO
-    document.getElementById('interesconsindescuento').innerText = valorPagoTotalDescuentoI.toFixed(2);
+    document.getElementById('interesconsindescuento').innerText = valorPagoTotalDescuentoI;
 
 
 
 
-    calculateInterest2();
+    calculateCapital();
 
 }
 
 
-function calculateInterest2() {
+function calculateCapital() {
    
     var capitalInput = document.getElementById("capitalInput").value.trim();
      var capital = parseFloat(capitalInput);
 
     // Calcular el CAPITAL DESCONTADO
     var descuentocombo2 = parseFloat(document.getElementById("descuentoCapitalCombo").value);
-    var valorCapitalDescontado = capital * descuentocombo2
+    var valorCapitalDescontado = Math.ceil(capital * descuentocombo2);
+    var valorCapitalDescontado2 = capital * descuentocombo2;
+
      // Mostrar el resultado en el campo de  CAPITAL DESCONTADO
-     document.getElementById("capitaldescontado").innerText = valorCapitalDescontado.toFixed(2);
+     document.getElementById("capitaldescontado").innerText = valorCapitalDescontado;
 
 
 
     // VALOR DE PAGO TOTAL CAPITAL
-     var valorPagoTotalCapital = capital - valorCapitalDescontado ;
-     document.getElementById("pagototalcapital").innerText = valorPagoTotalCapital.toFixed(2);
+     var valorPagoTotalCapital = Math.ceil(capital - valorCapitalDescontado2);
+     document.getElementById("pagototalcapital").innerText = valorPagoTotalCapital;
 
 
 
      // VALOR DE CAPITAL CON DSTO
-     var capitalcondescuento = valorPagoTotalCapital ;
+     var capitalcondescuento = Math.ceil(valorPagoTotalCapital) ;
 
-     document.getElementById("capitalcondescuento").innerText = capitalcondescuento.toFixed(2);
+     document.getElementById("capitalcondescuento").innerText = capitalcondescuento;
 
 
     //VALOR DEUDA TOTAL 02 SEGUNDO CARD 
   
     var valorinteresconsindescuento = parseFloat(document.getElementById("interesconsindescuento").innerText);
-    var resultPagoTotalDsctoIC = valorinteresconsindescuento - valorCapitalDescontado;
-    document.getElementById("pagototaldsctoic").innerText = resultPagoTotalDsctoIC.toFixed(2);
+    var resultPagoTotalDsctoIC = Math.ceil(valorinteresconsindescuento - valorCapitalDescontado2);
+    document.getElementById("pagototaldsctoic").innerText = resultPagoTotalDsctoIC;
 
 
 
@@ -126,7 +130,7 @@ function calculateInterest2() {
     var intdesc = parseFloat(document.getElementById("interesDescontado").innerText);
     var capdesc = parseFloat(document.getElementById("capitaldescontado").innerText);
     var resul = intdesc + capdesc;
-    document.getElementById("totaldescuento").innerText = resul.toFixed(2); // toFixed(2) para redondear a 2 decimales
+    document.getElementById("totaldescuento").innerText = resul;
 
 
     //total porcentaje descuento
@@ -182,15 +186,16 @@ function calculateCoutizacion() {
     var valorpagotdic= parseFloat(valorpagototaldsctoic);
 
     // Calcular el monto a financiar
-    var valormontoafinanciar = valorpagotdic - valorcuotaini;
+    var valormontoafinanciar = Math.ceil(valorpagotdic - valorcuotaini);
+    var valormontoafinanciar2 = valorpagotdic - valorcuotaini;
 
     // Mostrar el resultado en el campo montoafinanciar
-    document.getElementById("montoafinanciar").innerText = valormontoafinanciar.toFixed(2); // toFixed(2) para redondear a 2 decimales
+    document.getElementById("montoafinanciar").innerText = valormontoafinanciar; 
 
 
     //CALCULAR LA CUOTA APROX
-    var valorcuotaaprox = valormontoafinanciar/ valornumerodecuotasInput;
-    document.getElementById("cuotaaprox").innerText = valorcuotaaprox.toFixed(2); // toFixed(2) para redondear a 2 decimales
+    var valorcuotaaprox =  Math.ceil(valormontoafinanciar2/ valornumerodecuotasInput);
+    document.getElementById("cuotaaprox").innerText = valorcuotaaprox; // toFixed(2) para redondear a 2 decimales
 
 
 
