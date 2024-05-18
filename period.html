@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="./css/main.css">
-	<script src="./js/calculadorapuse.js"></script>
+	<script src="./js/calculadorapusecampo.js"></script>
 
 </head>
 <body>
@@ -49,12 +49,12 @@
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="period.html"><i class="zmdi zmdi-calculator zmdi-hc-fw"></i>Calculadora</a>
-						</li>
-						<!-- <li>
-							<a href="subject.html"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Subject</a>
+							<a href="period.html"><i></i>Calculadora</a>
 						</li>
 						<li>
+							<a href="subject.html"><i ></i> Calculadora Castigada</a>
+						</li>
+						<!-- <li>
 							<a href="section.html"><i class="zmdi zmdi-graduation-cap zmdi-hc-fw"></i> Section</a>
 						</li>
 						<li>
@@ -185,7 +185,7 @@
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-				<h1 class="text-titles">Simulador <small>Campo</small></h1>
+				<h1 class="text-titles">Calculadora <small>Campo</small></h1>
 			</div>
 		</div>
 	
@@ -214,7 +214,7 @@
 
 									<div class="col-md-4">
 										<div class="form-group">
-												<button type="button" class="btn btn-primary" onclick="calculateInterest()" style="background-color:#EA5B0C; color: white;">Calcular</button>
+												<button type="button" class="btn btn-primary" onclick="calculateInterestCampo()" style="background-color:#EA5B0C; color: white;">Calcular</button>
 										</div>
 									</div>
 
@@ -229,7 +229,7 @@
 	
 								<div class="mt-3" style="display: flex; align-items: center;">
 									<label for="descuentoInteresesCombo" style="color: black; margin-right: 10px; margin-bottom: -11px;">DSTO INTERESES (%):</label>
-									<select class="form-control" id="descuentoInteresesCombo" onchange="calculateInterest()" style="background-color: #EA5B0C;; color: white;">
+									<select class="form-control" id="descuentoInteresesCombo" onchange="calculateInterestCampo()" style="background-color: #EA5B0C;; color: white;">
 										<option value="0.00">0%</option>
 										<option value="0.05">5%</option>
 										<option value="0.1">10%</option>
@@ -330,7 +330,7 @@
 
 								<div class="mt-3" style="display: flex; align-items: center;">
 									<label for="descuentoCapitalCombo" style="color: black; margin-right: 10px; margin-bottom: -11px;">% DSTO CAPITAL:</label>
-									<select class="form-control" id="descuentoCapitalCombo" onchange="calculateCapital()"  style="background-color: #002856;; color: white;">
+									<select class="form-control" id="descuentoCapitalCombo" onchange="calculateCapitalCampo()"  style="background-color: #002856;; color: white;">
 										<option value="0.00">0%</option>
 										<option value="0.05">5%</option>
 										<option value="0.1">10%</option>
@@ -435,7 +435,7 @@
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-											<button type="button" class="btn btn-primary" onclick="calculateCoutizacion()" style="background-color:#EA5B0C; color: white;">Calcular</button>
+											<button type="button" class="btn btn-primary" onclick="calculateCoutizacionCampo()" style="background-color:#EA5B0C; color: white;">Calcular</button>
 
 										</div>
 									</div>
