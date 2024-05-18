@@ -304,7 +304,7 @@
 
 				<div class="col-md-6">
 					<div class="card">
-						<div class="card-header text-center"> <!-- Añadido 'text-center' para centrar el título -->
+						<div class="card-header text-center"> 
 							<h3 class="card-title">Capital</h3>
 						</div>
 						<div class="card-body">
@@ -388,34 +388,102 @@
 				</div>
 			</div>
 			<br>
-
-			<div class="col-md-12">
-				<div class="card">
-					<div class="card-header text-center"> <!-- Añadido 'text-center' para centrar el título -->
-						<h3 class="card-title">RESUMEN</h3>
-					</div>
-					<div class="card-body">
-						<form id="simulatorForm3">
-
-							<div class="row">
-								<div class="col-md-6">
-									<div style="display: flex; align-items: center;">
-										<label style="color: black; margin-right: 10px; margin-bottom: 0;">TOTAL DE DESCUENTO: S/</label>
-										<div id="totaldescuento"></div>
+			
+			<div class="row justify-content-center">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header text-center"> <!-- Añadido 'text-center' para centrar el título -->
+							<h3 class="card-title">RESUMEN</h3>
+						</div>
+						<div class="card-body">
+							<form id="simulatorForm3">
+								<div class="row">
+									<div class="col-md-6">
+										<div style="display: flex; align-items: center;">
+											<label style="color: black; margin-right: 10px; margin-bottom: 0;">TOTAL DE DESCUENTO: S/</label>
+											<div id="totaldescuento"></div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div style="display: flex; align-items: center;">
+											<label style="color: black; margin-right: 10px; margin-bottom: 0;">PORCENTAJE DE DESCUENTO: %</label>
+											<div id="porcentajedescuento"></div>
+										</div>
 									</div>
 								</div>
-								<div class="col-md-6">
-									<div style="display: flex; align-items: center;">
-										<label style="color: black; margin-right: 10px; margin-bottom: 0;">PORCENTAJE DE DESCUENTO: %</label>
-										<div id="porcentajedescuento"></div>
-									</div>
-								</div>
-							</div>
-
-						</form>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
+			<br>
+			
+			<div class="row justify-content-center">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header text-center">
+							<h3 class="card-title">Cuotizacion</h3>
+						</div>
+						<div class="card-body">
+							<form id="simulatorForm4">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="cuotainicial" style="color: black;">CUOTA INICIAL: S/</label>
+											<input type="number" class="form-control" id="cuotainicial" placeholder="Cuota Inicial">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="numerodecuotas" style="color: black;">N° de CUOTAS:</label>
+											<input type="number" class="form-control" id="numerodecuotas" placeholder="N° CUOTAS">
+										</div>
+									</div>
+								</div>
+			
+
+								
+
+
+
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<div class="mt-3">
+												<div style="display: flex; align-items: center;">
+													<label style="color: black; margin-right: 10px; margin-bottom: 0;">MONTO A FINANCIAR: S/</label>
+														<div id="montoafinanciar"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="col-md-6">
+										<div class="form-group">
+											<div class="mt-3">
+												<div style="display: flex; align-items: center;">
+													<label style="color: black; margin-right: 10px; margin-bottom: 0;">CUOTA APROX:</label>
+													<div id="cuotaaprox"></div>
+												</div>
+											</div>	
+										</div>
+									</div>
+								</div>
+			
+								<div class="col-md-12 text-center"> <!-- Añadido 'text-center' para centrar el botón -->
+									<div>
+										<button type="button" class="btn btn-primary" onclick="calculateCoutizacion()" style="background-color:#EA5B0C; color: white;">Calcular</button>
+									</div>
+								</div>
+			
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
 
 
 		</div>

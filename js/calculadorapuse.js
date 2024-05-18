@@ -7,7 +7,7 @@ function calculateInterest() {
 
     // Validar que ambos campos no estén vacíos
     if (deudaTotalInput === "" || capitalInput === "") {
-        alert("Por favor ingresa valores para el capital y el ingreso antes de calcular.");
+        alert("Por favor ingresa valores para la deuda total y el capital.");
         return; // Detener la ejecución de la función si falta algún valor
     }
 
@@ -140,5 +140,60 @@ function calculateInterest2() {
         document.getElementById("porcentajedescuento").innerText = factor.toFixed(0);
     }
 
+    var cuotainicialInput = document.getElementById("cuotainicial").value.trim();
+    
+    // Obtener el valor de cuotaaprox
+    var valornumerodecuotasInput = document.getElementById("numerodecuotas").value.trim();
+
+    // Validar que ambos campos no estén vacíos
+    if (cuotainicialInput !== "" && valornumerodecuotasInput !== "") {
+        calculateCoutizacion();
+    }
+
+
 }
 
+
+
+function calculateCoutizacion() {
+
+    var valorpagototaldsctoic = document.getElementById("pagototaldsctoic").innerText.trim();
+
+    if (valorpagototaldsctoic === "") {
+        alert("Por favor primero calcula el PAGO TOTAL DSCTO I+C del Capital");
+        return; 
+    }
+    
+    
+    // Obtener el valor del monto a financiar
+    var cuotainicialInput = document.getElementById("cuotainicial").value.trim();
+    
+    // Obtener el valor de cuotaaprox
+    var valornumerodecuotasInput = document.getElementById("numerodecuotas").value.trim();
+
+    // Validar que ambos campos no estén vacíos
+    if (cuotainicialInput === "" || valornumerodecuotasInput === "") {
+        alert("Por favor ingresa la cuota inicial y el numero de cuotas");
+        return; 
+    }
+
+    // Convertir los valores a números flotantes
+    var valorcuotaini = parseFloat(cuotainicialInput);
+    var valorpagotdic= parseFloat(valorpagototaldsctoic);
+
+    // Calcular el monto a financiar
+    var valormontoafinanciar = valorpagotdic - valorcuotaini;
+
+    // Mostrar el resultado en el campo montoafinanciar
+    document.getElementById("montoafinanciar").innerText = valormontoafinanciar.toFixed(2); // toFixed(2) para redondear a 2 decimales
+
+
+    //CALCULAR LA CUOTA APROX
+    var valorcuotaaprox = valormontoafinanciar/ valornumerodecuotasInput;
+    document.getElementById("cuotaaprox").innerText = valorcuotaaprox.toFixed(2); // toFixed(2) para redondear a 2 decimales
+
+
+
+
+
+}
